@@ -41,7 +41,8 @@ namespace nms
             var UR = worksheet.UsedRange;
 
             var usedRange = UR.Value;
-            int rows = usedRange.Length/5;
+            var row = UR.Rows;
+            int rows=row.Count;
             var obj = new Root();
             List<Root> list = new List<Root>();
             for (int i = 2; i <= rows; i++)
